@@ -1,8 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.6.5'
 
-gem 'devise'
-  
+gem 'faker', '~> 2.10', '>= 2.10.2'
 
 gem 'bootsnap', require: false
 gem 'jbuilder', '~> 2.0'
