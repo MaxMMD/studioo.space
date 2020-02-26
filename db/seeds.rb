@@ -22,7 +22,8 @@ i = 0
     name: "Casa #{Faker::Artist.name}",
     address: addresses[i],
     city: "Mexico City",
-    user: user
+    user: user,
+    price_per_day: rand(100..300)
   )
   space.save!
 i += 1
