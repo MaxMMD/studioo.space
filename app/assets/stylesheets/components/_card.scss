@@ -1,0 +1,13 @@
+.card-img-top {
+  object-fit: cover;
+  height: 12rem;
+  width: 100%;
+  display: block;
+}
+
+.cards-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  grid-gap: 1rem;
+}
