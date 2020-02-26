@@ -1,12 +1,16 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-      <h2>Please provide the following info</h2>
-          <%= simple_form_for([@space, @reservation]) do |f| %>
-            <%= f.input :start_on %>
-            <%= f.input :end_on %>
-            <%= f.submit "Confirm", class: "btn btn-primary" %>
-          <% end %>
+      <h2>Please confirm this reservation info: </h2>
+      <p>Total price $ <%= @reservation.total_price %></p>
+      <p>Reserving for <%= pluralize(@reservation.number_of_days, "day") %></p>
+      <p>From <%= @reservation.start_on.strftime("%A, %b %d %Y") %></p>
+      <p>To <%= @reservation.end_on.strftime("%A, %b %d %Y") %></p>
+      <%= simple_form_for([@space, @reservation]) do |f| %>
+        <%= f.input :start_on, as: :hidden %>
+        <%= f.input :end_on, as: :hidden %>
+        <%= f.submit "Confirm", class: "btn btn-primary" %>
+      <% end %>
     </div>
   </div>
 </div>

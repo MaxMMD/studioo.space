@@ -1,4 +1,34 @@
-<h1>Show space</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+      <h1><%= @space.name %></h1>
+      <table class="table table-bordered">
+        <tbody>
+          <tr>
+            <th scope="row">Address</th>
+            <td><%= @space.address %></td>
+          </tr>
+          <tr>
+            <th scope="row">City</th>
+            <td><%= @space.city %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+        <h2>Book this space</h2>
+          <%= simple_form_for([@space, @reservation], url: new_space_reservation_path(@space), method: :get) do |f| %>
+            <%= f.input :start_on %>
+            <%= f.input :end_on %>
+            <%= f.submit "Confirm", class: "btn btn-primary" %>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 
 
