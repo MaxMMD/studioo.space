@@ -7,22 +7,23 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require "faker"
 
+User.destroy_all
+Space.destroy_all
+
 user = User.create
 
-test = {
-    name: 'Picasso',
-    address: 'Mexico city',
-    user: users
-  }
+addresses = ['Colima 159','Guanajuato 118', 'Campeche 281', 'Colima 55',
+  'Bajío 231', 'Córdoba 100', 'Querétaro 99', 'Amsterdam 254', 'Alfonso Reyes 58',
+    'Alfonso Reyes 216', 'Tabasco 216', 'Tabasco 198', 'Amsterdam 123 B']
 
-# 20.times do
-#   space = Space.create!(
-#     name: Faker::Company.name,
-#     address: Faker::Address.street_address,
-#     city: Faker::Address.city,
-#     user: user
-#   )
-#   space.save!
-# end
-
-Space.create!(test)
+i = 0
+14.times do
+  space = Space.create!(
+    name: "Casa #{Faker::Artist.name}",
+    address: addresses[i],
+    city: "Mexico City",
+    user: user
+  )
+  space.save!
+i += 1
+end
