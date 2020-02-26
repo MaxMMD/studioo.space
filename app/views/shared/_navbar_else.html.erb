@@ -1,0 +1,24 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon-black fixed-top" id="navbar-else">
+  <%= link_to "#", class: "navbar-brand" do %>
+    <%= image_tag "https://res.cloudinary.com/dvlgiurta/image/upload/v1582656247/Studioo-logo_fhn3hy.png" %>
+    <% end %>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="navbar-links">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <%= link_to "browse", spaces_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "post", new_space_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "log in", new_user_session_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "sign up", new_user_registration_path, class: "nav-link" %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

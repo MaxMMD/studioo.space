@@ -43,3 +43,48 @@ text-shadow: 2px 2px 8px #000;
 .nav-link:hover {
   font-style: italic;
 }
+.navbar-lewagon {
+  justify-content: space-between;
+  background: black;
+  padding: 1em 8em 1em;
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 120px;
+}
+
+.navbar-lewagon {
+  // [...]
+  background-color: transparent;
+  transition: 0.5s background-color ease;
+}
+
+.navbar-lewagon-black {
+  background-color: black;
+}
+
+.navbar-links {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.nav-item {
+  padding-left: 30px;
+
+}
+
+.nav-link {
+color: white !important;
+font-family: 'Roboto Mono';
+font-size: 18px;
+text-shadow: 2px 2px 8px #000;
+}
+
+.nav-link:hover {
+  font-style: italic;
+}

@@ -2,7 +2,15 @@ class SpacesController < ApplicationController
   skip_before_action :authenticate_user!
 
   def index
-    @spaces = Space.all
+    @spaces = Space.geocoded #returns studio spaces with coordinates
+
+    @markers = @spaces.map do |space|
+      {
+        lat: space.latitude,
+        lng: space.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { space: space }),
+      }
+    end
   end
 
   def show
@@ -18,7 +26,7 @@ class SpacesController < ApplicationController
     @space = Space.new(space_params)
     @space.user = current_user
     @space.save
-    redirect_to space_path(@space)
+    redirect_to new
   end
 
   private
