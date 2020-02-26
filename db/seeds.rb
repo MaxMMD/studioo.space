@@ -13,11 +13,11 @@ Space.destroy_all
 user = User.create
 
 addresses = ['Colima 159','Guanajuato 118', 'Campeche 281', 'Colima 55',
-  'Bajío 231', 'Córdoba 100', 'Querétaro 99', 'Amsterdam 254', 'Alfonso Reyes 58',
-    'Alfonso Reyes 216', 'Tabasco 216', 'Tabasco 198', 'Amsterdam 123 B']
+  'Bajío 231', 'Campeche 237', 'Querétaro 99', 'Alfonso Reyes 58',
+    'Alfonso Reyes 216', 'Tabasco 216', 'Tabasco 198']
 
 i = 0
-14.times do
+12.times do
   space = Space.create!(
     name: "Casa #{Faker::Artist.name}",
     address: addresses[i],
