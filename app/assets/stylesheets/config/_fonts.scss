@@ -1,9 +1,9 @@
 // Import Google fonts
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|IBM+Plex+Mono:400,400i,500i|Roboto+Mono:400,400i");
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:700i|IBM+Plex+Mono:400,400i,500i|Roboto+Mono:300,400,400i");
 
 // Define fonts for body and headers
-$body-font: "Open Sans", "Helvetica", "sans-serif";
-$headers-font: "IBM Plex Mono", "Roboto Mono", "sans-serif";
+$body-font: "Roboto Mono", "Helvetica", "sans-serif";
+$headers-font: "IBM Plex Mono", "Roboto Mono", "Nunito Sans", "sans-serif";
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {

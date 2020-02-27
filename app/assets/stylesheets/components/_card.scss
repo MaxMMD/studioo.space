@@ -8,6 +8,33 @@
 .cards-grid {
   display: grid;
 
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   grid-gap: 1rem;
+}
+
+
+.card-body h3{
+  font-family: "Nunito Sans";
+  font-style: italic;
+  margin-bottom: 0.25rem;
+}
+
+a.space-card {
+  color: black;
+  transition: transform 0.25s;
+
+  &:hover {
+    text-decoration: none;
+    transform: translateY(-2px);
+    opacity: .8;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 12px;
+    margin-bottom: 0;
+  }
 }
