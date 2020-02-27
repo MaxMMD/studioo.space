@@ -1,22 +1,7 @@
-<div class="d-flex">
+<div class="d-flex align-items-start">
   <div class="cards-grid p-3 flex-grow-1">
     <% @spaces.each do |space| %>
-      <div class="card box-shadow">
-        <% if space.photo.attached? %>
-          <%= cl_image_tag space.photo.key, height: 250, width: 500, crop: :fill, class: "card-img-top" %> 
-        <% else %>
-          <img class="card-img-top" alt="image" src="https://placehold.it/500x250" data-holder-rendered="true">
-        <% end %>
-        <div class="card-body">
-          <h3><%= space.name %></h3>
-          <p class="card-text"><%= space.address %>, <%= space.city %> </p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-            <%= link_to  "view", space_path(space), class: "btn btn-primary" %>
-            </div>
-          </div>
-        </div>
-      </div>
+      <%= render 'card', space: space %>
     <% end %>
   </div>
   <div
@@ -25,5 +10,3 @@
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 </div>
-
-
