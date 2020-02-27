@@ -56,7 +56,7 @@
       <div class="card p-3 m-3  sticky-top">
 
         <div class="d-flex align-items-center mt-3">
-          <p><strong><h2><%= @space.price_per_day %></h2></strong></p>
+          <p><strong><h2>$<%= @space.price_per_day %></h2></strong></p>
         </div>
         <div class="d-flex align-items-center mt-1">
           <p><%= @space.address %></p>
@@ -73,7 +73,3 @@
     </div>
   </div>
 </div>
-
-<%= link_to "All Spaces" , spaces_path  %>
-<%= link_to "Book now" , new_space_reservation_path(@space)  %>
-
