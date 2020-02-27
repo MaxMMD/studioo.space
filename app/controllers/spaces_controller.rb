@@ -1,5 +1,5 @@
 class SpacesController < ApplicationController
-  skip_before_action :authenticate_user!
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     @spaces = Space.geocoded #returns studio spaces with coordinates
@@ -25,8 +25,11 @@ class SpacesController < ApplicationController
   def create
     @space = Space.new(space_params)
     @space.user = current_user
-    @space.save
-    redirect_to new
+    if @space.save
+      redirect_to new
+    else
+      render :new
+    end
   end
 
   private

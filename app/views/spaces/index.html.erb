@@ -2,7 +2,11 @@
   <div class="cards-grid p-3 flex-grow-1">
     <% @spaces.each do |space| %>
       <div class="card box-shadow">
-        <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="image" src="https://source.unsplash.com/featured/<%= rand(9999) %>/?gallery" data-holder-rendered="true">
+        <% if space.photo.attached? %>
+          <%= cl_image_tag space.photo.key, height: 250, width: 500, crop: :fill, class: "card-img-top" %> 
+        <% else %>
+          <img class="card-img-top" alt="image" src="https://placehold.it/500x250" data-holder-rendered="true">
+        <% end %>
         <div class="card-body">
           <h3><%= space.name %></h3>
           <p class="card-text"><%= space.address %>, <%= space.city %> </p>
