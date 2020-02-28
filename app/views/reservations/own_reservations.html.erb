@@ -1,0 +1,7 @@
+<div class="d-flex align-items-start">
+  <div class="cards-grid p-3 flex-grow-1">
+    <% @reservations.each do |reservation| %>
+      <%= render 'spaces/card', reservation: reservation, space: reservation.space %>
+    <% end %>
+  </div>
+</div>

@@ -8,7 +8,7 @@ class SpacesController < ApplicationController
     else
       @spaces = Space.geocoded
     end
-    
+
     @markers = @spaces.map do |space|
       {
         lat: space.latitude,
@@ -37,6 +37,10 @@ class SpacesController < ApplicationController
     else
       render :new
     end
+  end
+
+  def own_spaces
+    @spaces = Space.where(user: current_user)
   end
 
   private
