@@ -1,13 +1,14 @@
 .home-banner {
-  background-image: url('https://res.cloudinary.com/dvlgiurta/image/upload/v1582655830/landing-img_rzvdxl.png');
-  background-size: cover;
-  height: 100vh;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #eee;
+
   text-align: center;
   padding-top: 40vh;
 
 }
+  #myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
