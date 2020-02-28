@@ -25,7 +25,8 @@ class SpacesController < ApplicationController
 
   def create
     @space = Space.new(space_params)
-    @space.user = current_user
+    @user = User.new(params[:user_id])
+    @space.user = @user
     if @space.save
       redirect_to spaces_path
     else
