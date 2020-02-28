@@ -2,7 +2,12 @@ class SpacesController < ApplicationController
   skip_before_action :authenticate_user!
 
   def index
-    @spaces = Space.geocoded #returns studio spaces with coordinates
+    if params[:query].present?
+      sql_query = "city ILIKE :query OR address ILIKE :query"
+      @spaces = Space.geocoded.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @spaces = Space.geocoded
+    end
 
     @markers = @spaces.map do |space|
       {
