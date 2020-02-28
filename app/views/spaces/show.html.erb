@@ -21,54 +21,68 @@
 
 <!-- studio info -->
 <div class="border-bottom-light bg-white">
-  <div class="container d-flex align-items-center justify-content-between py-3">
+  <div class="container py-3">
     <div class="row">
       <div class="col-md-8 p-3">
         <h3><%= @space.name %></h3>
+        <img src="https://res.cloudinary.com/doytwihfl/image/upload/v1582928012/Screen_Shot_2020-02-28_at_17.12.41_fjxzxh.png" alt="reviews">
         <p>
-          Need an inspiring space for the day!  We've got you covered! This Mission loft is a light filled daily rental for private video / photo productions. The standard rental period is between 8AM and 8PM.
-          It is a light filled open floor plan (dining, kitchen and living room) that can host up to a 15 crew production in casual San Francisco style. <a href="url">Read more</a>
+          <%= @space.content %> <a href="#">Read more</a>
         </p>
+
+        <!-- Rentals -->
+          <div class="card card p-3 mb-3">
+            <h5><strong>STUDIO INFORMATION</strong></h5>
+            <p><small>Size: 32 m²</small></p>
+            <p><small>Type: private</small></p>
+            <p><small>Rental Period (Min): 30 Days</small></p>
+          </div>
+          <div class="card card p-3 mb-3">
+            <h5><strong>STUDIO USE</strong></h5>
+            <p><small>Light Sculpting</small></p>
+            <p><small>Ceramic Studio</small></p>
+            <p><small>Photo Studio</small></p>
+          </div>
+          <div class="card card p-3 mb-3">
+            <h5><strong>FACILITIES</strong></h5>
+            <p><small>Desk</small></p>
+            <p><small>Kitchen</small></p>
+            <p><small>Water</small></p>
+            <p><small>Windows</small></p>
+            <p><small>Electricity</small></p>
+            <p><small>Wifi</small></p>
+          </div>
+          <div class="card card p-3 mb-3">
+            <h5><strong>ACCESS</strong></h5>
+            <p><small>Parking</small></p>
+            <p><small>Public Transport</small></p>
+            <p><small>Wheel chair access</small></p>
+          </div>
+<img src="https://res.cloudinary.com/doytwihfl/image/upload/v1582928363/Screen_Shot_2020-02-28_at_17.17.06_aagnlh.png" alt="reviews">
       </div>
       <div class="col-md-4">
+        <!-- checkout -->
+        <div class="card p-3 m-3  sticky-top">
+          <div class="d-flex align-items-center mt-3">
+            <p><strong><h2>$<%= @space.price_per_day %>/day</h2></strong></p>
+          </div>
+          <div class="d-flex align-items-center mt-1">
+            <p><%= @space.address %>, <%= @space.city %></p>
+          </div>
+          <h5 class="mt-3 mb-3">Book this space</h5>
+          <%= simple_form_for([@space, @reservation], url: new_space_reservation_path(@space), method: :get) do |f| %>
+            <%= f.input :start_on %>
+            <%= f.input :end_on %>
+            <%= f.submit "Confirm", class: "btn btn-info btn-block" %>
+          <% end %>
+        </div>
       </div>
+
     </div>
   </div>
 </div>
+      <!-- /checkout -->
+
 <!-- /studio info -->
 
 <!-- studio checkout-->
-<div class="container">
-  <div class="row">
-    <div class="col-md-8 py-3">
-      <!-- make a card -->
-      <div class="card card p-3 mb-3">
-        <p><strong>BLABLA</strong></p>
-        <p><small>BLABLA</small></p>
-        <span>BLABLA</span>
-      </div>
-
-    <!-- /menu -->
-    </div>
-
-    <div class="col-md-4">
-      <!-- checkout -->
-      <div class="card p-3 m-3  sticky-top">
-
-        <div class="d-flex align-items-center mt-3">
-          <p><strong><h2>$<%= @space.price_per_day %></h2></strong></p>
-        </div>
-        <div class="d-flex align-items-center mt-1">
-          <p><%= @space.address %>, <%= @space.city %></p>
-        </div>
-        <h5 class="mt-3 mb-3">Book this space</h5>
-        <%= simple_form_for([@space, @reservation], url: new_space_reservation_path(@space), method: :get) do |f| %>
-          <%= f.input :start_on %>
-          <%= f.input :end_on %>
-          <%= f.submit "Confirm", class: "btn btn-primary btn-block" %>
-        <% end %>
-      </div>
-      <!-- /checkout -->
-    </div>
-  </div>
-</div>
