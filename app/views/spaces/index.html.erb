@@ -1,18 +1,7 @@
-<div class="d-flex">
+<div class="d-flex align-items-start">
   <div class="cards-grid p-3 flex-grow-1">
     <% @spaces.each do |space| %>
-      <div class="card box-shadow">
-        <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="image" src="https://source.unsplash.com/featured/<%= rand(9999) %>/?gallery" data-holder-rendered="true">
-        <div class="card-body">
-          <h3><%= space.name %></h3>
-          <p class="card-text"><%= space.address %>, <%= space.city %> </p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-            <%= link_to  "view", space_path(space), class: "btn btn-primary" %>
-            </div>
-          </div>
-        </div>
-      </div>
+      <%= render 'card', space: space %>
     <% end %>
   </div>
   <div
@@ -21,5 +10,3 @@
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 </div>
-
-

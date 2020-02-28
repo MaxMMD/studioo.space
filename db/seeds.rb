@@ -1,30 +1,39 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 require "faker"
 
 User.destroy_all
 Space.destroy_all
 
-user = User.create
+user = User.create!(
+  email: "user@user.com",
+  password: 123456
+)
 
-addresses = ['Colima 159','Guanajuato 118', 'Campeche 281', 'Colima 55',
-  'Bajío 231', 'Campeche 237', 'Querétaro 99', 'Alfonso Reyes 58',
-    'Alfonso Reyes 216', 'Tabasco 216', 'Tabasco 198']
+addresses = [
+  'Querétaro 99 - Condesa',
+  'Colima 55 - Condesa',
+  'Colima 159 - Condesa',
+  'Guanajuato 118',
+  'Campeche 281',
+  'Bajío 231',
+  'Campeche 237',
+  'Alfonso Reyes 58',
+  'Alfonso Reyes 216',
+  'Tabasco 216',
+  'Tabasco 198',
+  'Fernando Montes de Oca 28',
+]
 
-i = 0
-12.times do
-  space = Space.create!(
+12.times do |n|
+  space = Space.new(
     name: "Casa #{Faker::Artist.name}",
-    address: addresses[i],
+    address: addresses[n],
     city: "Mexico City",
+    content: "lorem ipsum",
     user: user,
     price_per_day: rand(100..300)
   )
+
+  # space.photo.attach() reqd the cloudinaey lecture about seeds
+
   space.save!
-i += 1
 end
