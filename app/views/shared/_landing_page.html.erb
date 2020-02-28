@@ -1,23 +1,16 @@
 <div class="container">
   <div class="row">
-    <div class="col-lg-6" id="landing-title">
+    <div class="col-lg" >
       <h1>Your next masterpiece starts here.</h1>
-    </div>
-    <div class="col-lg-6 d-flex" id="finder">
-      <form class="form-inline flex-grow-1">
-        <input class="shadow-lg form-control m-0 flex-grow-1 mx-md-2" type="search" placeholder="Condesa, CDMX" aria-label="Search">
-        <div class="dropdown mx-md-2">
-          <button class="btn btn-light dropdown-toggle m-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            space type
-          </button>
-          <div class="shadow-lg dropdown-menu rounded" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Art</a>
-            <a class="dropdown-item" href="#">Party</a>
-            <a class="dropdown-item" href="#">Music</a>
-          </div>
-        </div>
-        <button class="shadow-lg btn btn-primary mx-md-2" type="submit">Search</button>
-      </form>
+      <h4>Rent and Sublet creative spaces.</h4>
+      <%= form_tag spaces_path, method: :get do %>
+      <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Find a space"
+                                      %>
+      <%= submit_tag "Search", class: "btn btn-primary" %>
+      <% end %>
     </div>
   </div>
 </div>

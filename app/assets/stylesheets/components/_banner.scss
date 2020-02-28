@@ -1,7 +1,7 @@
 .home-banner {
 
   text-align: center;
-  padding-top: 40vh;
+  padding-top: 30vh;
 }
   #myVideo {
 
@@ -15,7 +15,7 @@
 
 .wrapper {
   position: absolute;
-  width: 105%;
+  width: 100%;
 }
 
 .gradient {
@@ -24,7 +24,7 @@
   height: calc(100vh - 70px);
   min-height: 600px;
   object-fit: cover;
-  position: relative;
+  position: absolute;
 }
 
 video {
