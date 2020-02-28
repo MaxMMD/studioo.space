@@ -2,16 +2,37 @@
 
   text-align: center;
   padding-top: 40vh;
-  background-image:
-linear-gradient(to bottom, rgba(20, 20, 20, 0.98), rgba(20, 20, 20, 0.36), rgba(20, 20, 20, 0.73)),
-url('https://res.cloudinary.com/dvlgiurta/image/upload/v1582655830/landing-img_rzvdxl.png');
-
 }
   #myVideo {
-  position: fixed;
+
   right: 0;
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
+  position: absolute;
+  z-index: -1;
 }
 
+.wrapper {
+  position: absolute;
+  width: 105%;
+}
+
+.gradient {
+  background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.3),rgba(0,0,0,0.7));
+  width: 100%;
+  height: calc(100vh - 70px);
+  min-height: 600px;
+  object-fit: cover;
+  position: relative;
+}
+
+video {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: calc(100vh - 80px);
+  min-height: 600px;
+  object-fit: cover;
+}
