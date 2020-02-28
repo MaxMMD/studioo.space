@@ -1,0 +1,18 @@
+Searching 165 files for ":cloudinqry"
+
+0 matches
+
+Searching 165 files for ":cloudinqay"
+
+0 matches
+
+Searching 165 files for ":cloudinary"
+
+/Users/maximemaletdupont/code/MaxMMD/studioo.space/config/environments/development.rb:
+   33
+   34    # Store uploaded files on the local file system (see config/storage.yml for options)
+   35:   config.active_storage.service = :cloudinary
+   36
+   37    config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+1 match in 1 file
