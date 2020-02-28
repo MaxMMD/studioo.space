@@ -1,0 +1,7 @@
+<div class="d-flex align-items-start">
+  <div class="cards-grid p-3 flex-grow-1">
+    <% @spaces.each do |space| %>
+      <%= render 'card', space: space %>
+    <% end %>
+  </div>
+</div>
