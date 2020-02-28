@@ -23,17 +23,17 @@ addresses = [
   'Fernando Montes de Oca 28',
 ]
 
-12.times do |n|
-  space = Space.new(
-    name: "Casa #{Faker::Artist.name}",
-    address: addresses[n],
-    city: "Mexico City",
-    content: "lorem ipsum",
-    user: user,
-    price_per_day: rand(100..300)
-  )
+# 12.times do |n|
+#   space = Space.new(
+#     name: "Casa #{Faker::Artist.name}",
+#     address: addresses[n],
+#     city: "Mexico City",
+#     content: "lorem ipsum",
+#     user: user,
+#     price_per_day: rand(100..300)
+#   )
 
-  # space.photo.attach() reqd the cloudinaey lecture about seeds
+#   # space.photo.attach() reqd the cloudinaey lecture about seeds
 
-  space.save!
-end
+#   space.save!
+# end
