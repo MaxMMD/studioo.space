@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :reservations, :reviews, only: [:new, :create]
     collection do
       get 'own_spaces' #this would be the controller action
+      get "spaces/:space_id/reviews", to: "reviews#index"
     end
   end
 
