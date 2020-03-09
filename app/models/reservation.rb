@@ -1,6 +1,8 @@
 class Reservation < ApplicationRecord
   belongs_to :user
   belongs_to :space
+  monetize :price_per_day
+  
   has_many :reviews, dependent: :destroy
 
   validates :start_on, :end_on, presence: true
