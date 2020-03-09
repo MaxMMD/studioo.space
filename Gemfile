@@ -21,6 +21,7 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'devise'
 gem 'geocoder'
+gem 'photoswipe-rails', '~> 4.1', '>= 4.1.2'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

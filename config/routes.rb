@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :spaces, only: [:index, :show, :new, :create, :destroy] do
-    resources :reservations, only: [:new, :create]
+    resources :reservations, :reviews, only: [:new, :create]
     collection do
       get 'own_spaces' #this would be the controller action
     end
