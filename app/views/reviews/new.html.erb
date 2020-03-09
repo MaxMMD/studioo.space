@@ -1,4 +1,4 @@
-<%= simple_form_for [@space, @review] do |f| %>
+<%= simple_form_for ([@reservation, @review]) do |f| %>
   <%= f.input :content %>
   <%= f.submit "add a review", class: "btn btn-primary" %>
 <% end %>

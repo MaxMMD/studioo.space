@@ -1,16 +1,23 @@
 class ReviewsController < ApplicationController
+  def index
+
+  end
+
   def new
-    @space = Space.find(params[:space_id])
     @review = Review.new
+    @reservation = Reservation.find(params[:reservation_id])
   end
 
   def create
     @review = Review.new(review_params)
-    # we need `restaurant_id` to associate review with corresponding restaurant
-    @space = Space.find(params[:space_id])
-    @review.space = @space
-    @review.save
-    redirect_to space_path(@space)
+    @reservation = Reservation.find(params[:reservation_id])
+    @review.reservation = @reservation
+
+    if @review.save
+      redirect_to space_path(@reservation.space)
+    else
+      render :new
+    end
   end
 
   private
