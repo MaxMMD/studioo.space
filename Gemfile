@@ -3,7 +3,6 @@ ruby '2.6.5'
 
 gem 'faker', '~> 2.10', '>= 2.10.2'
 
-gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.12.0'
 
 gem 'bootsnap', require: false
@@ -22,6 +21,8 @@ gem 'webpacker'
 gem 'devise'
 gem 'geocoder'
 gem 'photoswipe-rails', '~> 4.1', '>= 4.1.2'
+
+gem 'money-rails'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
