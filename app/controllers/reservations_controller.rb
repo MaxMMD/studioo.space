@@ -33,7 +33,14 @@ class ReservationsController < ApplicationController
 
     @reservation.update!(checkout_session_id: session.id)
 
-    redirect_to new_reservation_payment_path(@reservation)
+
+
+    if @reservation.save
+      NotificationChannel.broadcast_to(@space.user, "Hey somebody booked #{@space.name}!")
+      redirect_to new_reservation_payment_path(@reservation)
+    else
+      raise
+    end
   end
 
   def own_reservations

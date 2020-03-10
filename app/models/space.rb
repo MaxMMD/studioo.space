@@ -2,6 +2,7 @@ class Space < ApplicationRecord
   has_one_attached :photo
 
   has_many :reservations, dependent: :destroy
+  has_many :reservations, dependent: :destroy
   has_many :reviews, through: :reservations
   has_many :space_tags
 
