@@ -28,9 +28,6 @@ class ReservationsController < ApplicationController
     # NO 4XITE, HAY QUE CREAR MIGRACION con session id y state
     # @reservation.nuevo_campo_referenciando_stripe = session.id
 
-    @reservation.save
-    redirect_to reservation_path(@reservation)
-
   end
 
   def own_reservations
