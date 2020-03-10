@@ -17,9 +17,9 @@ class Space < ApplicationRecord
     "#{address} - #{city}"
   end
 
-  # def sku
-  #   "#{self.class.name.parameterize}-#{id}"
-  # end
+  def sku
+    "#{self.class.name.parameterize}-#{id}"
+  end
 
   def booked_by?(user)
     reservations.any? do |reservation|
