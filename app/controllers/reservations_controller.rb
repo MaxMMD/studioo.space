@@ -15,8 +15,12 @@ class ReservationsController < ApplicationController
     @reservation.user = current_user #assigned the user (current user)
     @reservation.price_per_day = @space.price_per_day
 
-    @reservation.save
-    redirect_to reservation_path(@reservation)
+    if @reservation.save
+      NotificationChannel.broadcast_to(@space.user, "Hey somebody booked #{@space.name}!")
+      redirect_to reservation_path(@reservation)
+    else
+      raise
+    end
   end
 
   def own_reservations
