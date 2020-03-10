@@ -24,6 +24,5 @@ class Space < ApplicationRecord
     reservations.any? do |reservation|
       reservation.user == user
     end
->>>>>>> 1bbdfee6272084f7c77f24e957df8d180daf701f
   end
 end
