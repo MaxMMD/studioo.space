@@ -59,7 +59,24 @@
             <p><small>Wheel chair access</small></p>
           </div>
 <img src="https://res.cloudinary.com/doytwihfl/image/upload/v1582928363/Screen_Shot_2020-02-28_at_17.17.06_aagnlh.png" alt="reviews">
+
+
+      <dl>
+        User booked <%= @space.name %>
+        <% @space.reviews.each do |review| %>
+          <dt><%= review.content %></dt>
+          <dd><%= review.ratings %></dd>
+        <% end %>
+      </dl>
+
+      <% if @space.booked_by?(current_user)  %>
+      <% end %>
       </div>
+
+
+
+
+
       <div class="col-md-4">
         <!-- checkout -->
         <div class="card p-3 m-3  sticky-top">

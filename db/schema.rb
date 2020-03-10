@@ -65,6 +65,7 @@ ActiveRecord::Schema.define(version: 2020_03_10_164732) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "reservation_id"
+    t.integer "ratings"
     t.index ["reservation_id"], name: "index_reviews_on_reservation_id"
   end
 

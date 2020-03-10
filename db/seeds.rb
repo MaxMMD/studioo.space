@@ -33,7 +33,5 @@ addresses = [
     price_per_day_cents: rand(1000..3000)
   )
 
-  # space.photo.attach() reqd the cloudinaey lecture about seeds
-
   space.save!
 end

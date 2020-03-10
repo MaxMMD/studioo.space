@@ -2,7 +2,9 @@ class Space < ApplicationRecord
   has_one_attached :photo
 
   has_many :reservations, dependent: :destroy
+  has_many :reviews, through: :reservations
   has_many :space_tags
+
   belongs_to :user
 
   geocoded_by :full_address
@@ -14,7 +16,14 @@ class Space < ApplicationRecord
     "#{address} - #{city}"
   end
 
-  def sku
-    "#{self.class.name.parameterize}-#{id}"
+  # def sku
+  #   "#{self.class.name.parameterize}-#{id}"
+  # end
+
+  def booked_by?(user)
+    reservations.any? do |reservation|
+      reservation.user == user
+    end
+>>>>>>> 1bbdfee6272084f7c77f24e957df8d180daf701f
   end
 end
