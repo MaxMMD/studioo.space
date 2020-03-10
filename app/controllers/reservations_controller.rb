@@ -11,17 +11,29 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.new(reservation_params)
     @space = Space.find(params[:space_id]) # We also need the space ID, same as the new method
 
-    # CREAR OBJETO DE STRIPE *SESSION
-
     @reservation.space = @space  #assigned the space
     @reservation.user = current_user #assigned the user (current user)
     @reservation.price_per_day = @space.price_per_day
+    @reservation.status = 'pending'
+    @reservation.save!
 
-    # NO 4XITE, HAY QUE CREAR MIGRACION con session id y state
-    # @reservation.nuevo_campo_referenciando_stripe = session.id
+    # CREAR OBJETO DE STRIPE *SESSION
+    session = Stripe::Checkout::Session.create(
+    payment_method_types: ['card'],
+    line_items: [{
+      name: @reservation.title,
+      amount: @reservation.total_price_cents,
+      currency: 'usd',
+      quantity: 1
+    }],
+    # CREAR URLS PARA SUCCESS Y CANCEL
+    success_url: reservation_url(@reservation),
+    cancel_url: "http://cancel_url"
+    )
 
-    @reservation.save
-    redirect_to reservation_path(@reservation)
+    @reservation.update!(checkout_session_id: session.id)
+
+    redirect_to new_reservation_payment_path(@reservation)
   end
 
   def own_reservations

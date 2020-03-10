@@ -87,7 +87,7 @@
             <p><%= @space.address %>, <%= @space.city %></p>
           </div>
           <h5 class="mt-3 mb-3">Book this space</h5>
-          <%= simple_form_for([@space, @reservation], url: new_space_reservation_path(@space), method: :get) do |f| %>
+          <%= simple_form_for [@space, @reservation] do |f| %>
             <%= f.input :start_on %>
             <%= f.input :end_on %>
             <%= f.submit "Confirm", class: "btn btn-info btn-block" %>

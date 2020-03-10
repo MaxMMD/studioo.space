@@ -14,4 +14,12 @@ class Reservation < ApplicationRecord
   def total_price
     price_per_day * number_of_days
   end
+
+  def total_price_cents
+    price_per_day_cents * number_of_days
+  end
+
+  def title
+    "#{space.name} for #{number_of_days} day#{number_of_days > 1 ? 's' : ''}"
+  end
 end
