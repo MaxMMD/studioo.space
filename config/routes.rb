@@ -25,5 +25,8 @@ Rails.application.routes.draw do
       get 'own_reservations'
     end
   end
+  if Rails.env.development?
+    get 'kitchen_sink', to: 'pages#kitchen_sink'
+  end
 end
 
