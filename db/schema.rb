@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_09_224203) do
+ActiveRecord::Schema.define(version: 2020_03_10_164732) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,18 @@ ActiveRecord::Schema.define(version: 2020_03_09_224203) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "orders", force: :cascade do |t|
+    t.string "state"
+    t.integer "amount_cents", default: 0, null: false
+    t.string "checkout_session_id"
+    t.bigint "user_id"
+    t.bigint "space_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["space_id"], name: "index_orders_on_space_id"
+    t.index ["user_id"], name: "index_orders_on_user_id"
+  end
+
   create_table "reservations", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "space_id"
@@ -46,6 +58,14 @@ ActiveRecord::Schema.define(version: 2020_03_09_224203) do
     t.integer "price_per_day_cents", default: 0, null: false
     t.index ["space_id"], name: "index_reservations_on_space_id"
     t.index ["user_id"], name: "index_reservations_on_user_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "reservation_id"
+    t.index ["reservation_id"], name: "index_reviews_on_reservation_id"
   end
 
   create_table "space_tags", force: :cascade do |t|
@@ -90,8 +110,11 @@ ActiveRecord::Schema.define(version: 2020_03_09_224203) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "orders", "spaces"
+  add_foreign_key "orders", "users"
   add_foreign_key "reservations", "spaces"
   add_foreign_key "reservations", "users"
+  add_foreign_key "reviews", "reservations"
   add_foreign_key "space_tags", "spaces"
   add_foreign_key "space_tags", "tags"
   add_foreign_key "spaces", "users"

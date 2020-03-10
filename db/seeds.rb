@@ -30,7 +30,7 @@ addresses = [
     city: "Mexico City",
     content: "lorem ipsum",
     user: user,
-    price_per_day: rand(100..300)
+    price_per_day_cents: rand(1000..3000)
   )
 
   # space.photo.attach() reqd the cloudinaey lecture about seeds

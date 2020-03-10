@@ -19,5 +19,7 @@ Rails.application.routes.draw do
       get 'own_reservations'
     end
   end
+
+  resources :orders, only: [:show, :create]
 end
 
