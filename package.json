@@ -2,6 +2,7 @@
   "name": "studioo_space",
   "private": true,
   "dependencies": {
+    "@rails/actioncable": "^6.0.2-1",
     "@rails/webpacker": "4.2.2",
     "bootstrap": "^4.4.1",
     "jquery": "^3.4.1",

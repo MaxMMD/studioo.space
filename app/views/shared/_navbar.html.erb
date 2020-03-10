@@ -25,10 +25,15 @@
         <li class="nav-item">
           <%= link_to "messages", "#", class: "nav-link" %>
         </li>
+        <li class="nav-item" id="notifMenu">
+          <%= link_to "notifications", "#", class: "nav-link", id: "counterTracker"%>
+        </li>
         <li class="nav-item dropdown">
           <%= image_tag "https://res.cloudinary.com/doytwihfl/image/upload/v1582922730/T02NE0241-USA30KXB3-g67656ac417f-512_widzih.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "my studioos", own_spaces_spaces_path, class: "dropdown-item" %>
+            <% if current_user.renter? %>
+              <%= link_to "my studioos", own_spaces_spaces_path, class: "dropdown-item" %>
+            <% end %>
             <%= link_to "my reservations", own_reservations_reservations_path, class: "dropdown-item" %>
             <%= link_to "log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>

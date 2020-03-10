@@ -11,12 +11,26 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.new(reservation_params)
     @space = Space.find(params[:space_id]) # We also need the space ID, same as the new method
 
+    # CREAR OBJETO DE STRIPE *SESSION
+
     @reservation.space = @space  #assigned the space
     @reservation.user = current_user #assigned the user (current user)
     @reservation.price_per_day = @space.price_per_day
 
+
+    if @reservation.save
+      NotificationChannel.broadcast_to(@space.user, "Hey somebody booked #{@space.name}!")
+      redirect_to reservation_path(@reservation)
+    else
+      raise
+    end
+
+    # NO 4XITE, HAY QUE CREAR MIGRACION con session id y state
+    # @reservation.nuevo_campo_referenciando_stripe = session.id
+
     @reservation.save
     redirect_to reservation_path(@reservation)
+
   end
 
   def own_reservations
