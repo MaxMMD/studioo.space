@@ -26,6 +26,10 @@ Rails.application.routes.draw do
     end
   end
 
+  if Rails.env.development?
+    get 'kitchen_sink', to: 'pages#kitchen_sink'
+  end
+
   resources :orders, only: [:show, :create]
 end
 

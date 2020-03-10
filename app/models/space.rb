@@ -3,6 +3,7 @@ class Space < ApplicationRecord
 
   has_many :reservations, dependent: :destroy
   has_many :reviews, through: :reservations
+  has_many :reservations, dependent: :destroy
   has_many :space_tags
 
   belongs_to :user
