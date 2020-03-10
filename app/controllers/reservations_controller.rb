@@ -17,11 +17,20 @@ class ReservationsController < ApplicationController
     @reservation.user = current_user #assigned the user (current user)
     @reservation.price_per_day = @space.price_per_day
 
+
+    if @reservation.save
+      NotificationChannel.broadcast_to(@space.user, "Hey somebody booked #{@space.name}!")
+      redirect_to reservation_path(@reservation)
+    else
+      raise
+    end
+
     # NO 4XITE, HAY QUE CREAR MIGRACION con session id y state
     # @reservation.nuevo_campo_referenciando_stripe = session.id
 
     @reservation.save
     redirect_to reservation_path(@reservation)
+
   end
 
   def own_reservations
