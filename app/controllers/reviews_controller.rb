@@ -12,7 +12,7 @@ class ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @reservation = Reservation.find(params[:reservation_id])
     @review.reservation = @reservation
-
+    puts params
     if @review.save
       redirect_to space_path(@reservation.space)
     else
@@ -23,6 +23,6 @@ class ReviewsController < ApplicationController
   private
 
   def review_params
-    params.require(:review).permit(:content)
+    params.require(:review).permit(:content, :ratings)
   end
 end
