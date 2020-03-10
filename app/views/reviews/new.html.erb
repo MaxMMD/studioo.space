@@ -1,4 +1,8 @@
-<%= simple_form_for ([@reservation, @review]) do |f| %>
-  <%= f.input :content %>
+<%= simple_form_for ([@reservation, @review]), html: { class: "rating-widget"} do |f| %>
+
+  <%= render "reviews/rating" %>
+  <%= f.input :content, input_html: {id: "review_content"}%>
   <%= f.submit "add a review", class: "btn btn-primary" %>
 <% end %>
+
+
