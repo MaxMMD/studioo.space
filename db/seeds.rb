@@ -1,5 +1,5 @@
 require "faker"
-
+Tag.destroy_all
 User.destroy_all
 Space.destroy_all
 
@@ -34,4 +34,9 @@ addresses = [
   )
 
   space.save!
+end
+
+
+%w(painting photo sculpting filming recording woodwork ceramic).each do |name|
+  Tag.create(name: name)
 end
