@@ -1,21 +1,6 @@
 .alert {
   position: fixed;
-  top: 16px;
-  left: 16px;
+  top: 82px;
+  left: 36px;
   z-index: 1000;
-}
-
-.log {
-  padding: 16px 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: white;
-  box-shadow: 0 0 8px rgba(0,0,0,0.2);
-  border-radius: 4px;
-  margin: 8px;
-}
-
-.log-success {
-  border: 2px solid #1EDD88;
 }

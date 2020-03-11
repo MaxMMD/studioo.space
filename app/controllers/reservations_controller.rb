@@ -27,7 +27,7 @@ class ReservationsController < ApplicationController
       quantity: 1
     }],
     # CREAR URLS PARA SUCCESS Y CANCEL
-    success_url: reservation_url(@reservation),
+    success_url: own_reservations_reservations_url + "?notification=true&notificationTitle=Successful reservation",
     cancel_url: "http://cancel_url"
     )
 

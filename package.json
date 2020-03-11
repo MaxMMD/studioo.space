@@ -7,7 +7,8 @@
     "bootstrap": "^4.4.1",
     "jquery": "^3.4.1",
     "mapbox-gl": "^1.8.1",
-    "popper.js": "^1.16.1"
+    "popper.js": "^1.16.1",
+    "sweetalert2": "^9.10.0"
   },
   "devDependencies": {
     "webpack-dev-server": "^3.10.3"
