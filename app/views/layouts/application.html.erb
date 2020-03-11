@@ -14,9 +14,8 @@
   <body>
     <%= render "shared/navbar" %>
     <%= yield %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-
+    <p class="notice <%= notice && "alert alert-secondary" %>" role="alert"><%= notice %></p>
+    <p class="alert <%= alert && "alert-secondary" %>"><%= alert %></p>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
   </body>

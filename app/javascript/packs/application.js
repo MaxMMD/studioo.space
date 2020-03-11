@@ -5,8 +5,10 @@ import { initMapbox } from '../plugins/init_mapbox';
 import { initNotificationChannel } from '../channels/notification_channel';
 import { ratings } from '../components/ratings';
 import { notifications } from '../components/notifications';
+import { initSweetAlerts } from '../components/sweet-alert';
 
 initMapbox();
 initUpdateNavbarOnScroll();
 initNotificationChannel();
+initSweetAlerts();
 
