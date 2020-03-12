@@ -5,10 +5,10 @@
           <%= simple_form_for(@space) do |f| %>
             <%= f.input :name, required: true, autofocus: true %>
             <%= f.input :content, required: true %>
+            <%= f.association :tags, input_html: { class: "select2" } %>
             <%= f.input :address, required: true %>
             <%= f.input :city, required: true %>
             <%= f.input :price_per_day, required: true %>
-            <%= f.association :tags %>
             <%= f.input :photo, as: :file%><br>
             <%= f.submit "List a space", class: "btn btn-outline-dark btn-lg btn-block" %>
           <% end %>

@@ -9,7 +9,7 @@
       <p>From <%= @reservation.start_on.strftime("%A, %b %d %Y") %></p>
       <p>To <%= @reservation.end_on.strftime("%A, %b %d %Y") %></p>
       <br>
-      <button id="pay" class="btn btn-outline-dark btn-lg btn-block">Pay</button>
+      <button id="pay" class="btn btn-outline-dark btn-lg btn-block">Confirm</button>
       <script src="https://js.stripe.com/v3/"></script>
       <script>
         const paymentButton = document.getElementById('pay');
