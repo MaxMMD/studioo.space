@@ -82,3 +82,10 @@ document.addEventListener("keyup", (event) => {
     document.querySelector("[name='space[price_per_day]']").value = "100.50";
   }
 })
+
+// Bootsrap alert auto-close
+window.setTimeout(function() {
+  $(".alert").fadeTo(500, 0).slideUp(500, function(){
+      $(this).remove(); 
+  });
+}, 2000);
