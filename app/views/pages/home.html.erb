@@ -1,10 +1,503 @@
-<div class="wrapper">
-<div class="gradient">
-<div class="home-banner">
-<video autoplay muted loop id="myVideo">
-<source src="https://res.cloudinary.com/dvlgiurta/video/upload/v1582857249/326-1080_djradp.mp4" type="video/mp4">
-</video>
-  <%= render "shared/landing_page" %>
-</div>
-</div>
-</div>
+ <%= render "shared/header_search" %>
+    <!-- Experiences -->
+    <div class="bgxp text-white space-2 overflow-hidden">
+      <div class="container">
+        <div class="row no-gutters align-items-center pb-5">
+          <div class="col-lg-5 mb-5 mb-lg-0">
+            <h6 class="text-uppercase font-weight-medium letter-spacing-0_06 mb-3">More than spaces. Experiences</h6>
+            <h2 class="text-lh-xs mb-4">Find the perfect creative space<br class="d-none d-lg-inline-block">for your next project</h2>
+            <p class="text-white-70">Start a new life with better experience because life<br class="d-none d-lg-inline-block"> is never flat, make sure you won't missed it</p>
+
+            <!-- Gallarie's arrows -->
+            <div id="sliderSyncingThumb" class="js-slick-carousel u-slick pt-9 mt-6"
+                 data-infinite="true"
+                 data-slides-show="1"
+                 data-is-thumbs="true"
+                 data-nav-for="#sliderSyncingNav"
+                 data-arrows-classes="u-slick__arrow-classic u-slick__arrow-centered--y rounded-circle"
+                 data-arrow-left-classes="fa fa-arrow-left u-slick__arrow-classic-inner bg-white text-dark left-0"
+                 data-arrow-right-classes="fa fa-arrow-right u-slick__arrow-classic-inner bg-white text-dark right-0" style="width: 90px;">
+              <div class="js-slide d-none">
+                <img class="img-fluid" src="../../theme/img/demo/real-estate/gallery-1.jpg" alt="Image Description">
+              </div>
+
+              <div class="js-slide d-none">
+                <img class="img-fluid" src="../../theme/img/demo/real-estate/gallery-2.jpg" alt="Image Description">
+              </div>
+
+              <div class="js-slide d-none">
+                <img class="img-fluid" src="../../theme/img/demo/real-estate/gallery-3.jpg" alt="Image Description">
+              </div>
+
+              <div class="js-slide d-none">
+                <img class="img-fluid" src="../../theme/img/demo/real-estate/gallery-4.jpg" alt="Image Description">
+              </div>
+
+              <div class="js-slide d-none">
+                <img class="img-fluid" src="../../theme/img/demo/real-estate/gallery-5.jpg" alt="Image Description">
+              </div>
+
+              <div class="js-slide d-none">
+                <img class="img-fluid" src="../../theme/img/demo/real-estate/gallery-6.jpg" alt="Image Description">
+              </div>
+            </div>
+            <!-- End Gallarie's arrows -->
+          </div>
+
+          <div class="col-lg-6 offset-lg-1">
+            <div class="position-relative h-100 vw-lg-50 overflow-hidden">
+              <!-- Slick Carousel -->
+              <div id="sliderSyncingNav" class="js-slick-carousel js-slick-gallery u-slick u-slick--equal-height u-slick--gutters-3 mr-lg-n9"
+                   data-infinite="true"
+                   data-slides-show="4"
+                   data-center-mode="false"
+                   data-nav-for="#sliderSyncingThumb"
+                   data-responsive='[{
+                     "breakpoint": 1442,
+                     "settings": {
+                       "slidesToShow": 4
+                     }
+                   }, {
+                     "breakpoint": 1441,
+                     "settings": {
+                       "slidesToShow": 3
+                     }
+                   }, {
+                     "breakpoint": 992,
+                     "settings": {
+                       "slidesToShow": 3
+                     }
+                   }, {
+                     "breakpoint": 768,
+                     "settings": {
+                       "slidesToShow": 2
+                     }
+                   }, {
+                     "breakpoint": 300,
+                     "settings": {
+                       "slidesToShow": 1
+                     }
+                   }]'>
+                <div class="js-slide my-3 lift-lg shadow-2-sm-hover">
+                  <a class="w-100 card bg-img-hero border-0 gradient-overlay-half-black-v2 min-height-320 text-white rounded-pseudo p-3" href="#" style="background-image: url(https://images.unsplash.com/photo-1512813498716-3e640fed3f39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=666&q=80);">
+                    <div class="mt-auto text-center">
+                      <h5 class="font-weight-normal">Photo Studio</h5>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="js-slide my-3 lift-lg shadow-2-sm-hover">
+                  <a class="w-100 card bg-img-hero border-0 gradient-overlay-half-black-v2 min-height-320 text-white rounded-pseudo p-3" href="#" style="background-image: url(https://images.unsplash.com/photo-1562596378-f50b09a65008?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80);">
+                    <div class="mt-auto text-center">
+                      <h5 class="font-weight-normal">Video Shoot</h5>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="js-slide my-3 lift-lg shadow-2-sm-hover">
+                  <a class="w-100 card bg-img-hero border-0 gradient-overlay-half-black-v2 min-height-320 text-white rounded-pseudo p-3" href="#" style="background-image: url(https://images.unsplash.com/photo-1568438397894-72318e6f8674?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);">
+                    <div class="mt-auto text-center">
+                      <h5 class="font-weight-normal">Painting Studio</h5>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="js-slide my-3 lift-lg shadow-2-sm-hover">
+                  <a class="w-100 card bg-img-hero border-0 gradient-overlay-half-black-v2 min-height-320 text-white rounded-pseudo p-3" href="#" style="background-image: url(https://images.unsplash.com/photo-1551712744-1963ba88d303?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">
+                    <div class="mt-auto text-center">
+                      <h5 class="font-weight-normal">Music Studio</h5>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="js-slide my-3 lift-lg shadow-2-sm-hover">
+                  <a class="w-100 card bg-img-hero border-0 gradient-overlay-half-black-v2 min-height-320 text-white rounded-pseudo p-3" href="#" style="background-image: url(https://images.unsplash.com/photo-1447758902204-48010b87c24d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">
+                    <div class="mt-auto text-center">
+                      <h5 class="font-weight-normal">Sculpting Studio</h5>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <!-- End Slick Carousel -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Experiences -->
+
+
+    <!-- Featured properties -->
+    <div class="container space-2">
+      <!-- Title -->
+      <div class="row align-items-end mb-6">
+        <div class="col-sm-8">
+          <h2 class="text-lh-xs">Featured Spaces</h2>
+          <p class="mb-sm-0">Curated creative spaces in your city.</p>
+        </div>
+
+        <div class="col-sm-4 text-sm-right">
+          <a class="btn btn-sm btn-primary" href="#">See more spaces</a>
+        </div>
+      </div>
+      <!-- End Title -->
+
+      <div class="row">
+        <div class="col-md-6 col-lg-4 mb-5">
+          <!-- Property -->
+          <article class="card border-0 shadow-sm h-100 mb-3">
+            <a href="#"><img class="card-img-top" src="../../theme/img/demo/real-estate/property-1.jpg" alt="Image Description"></a>
+            <div class="card-body pb-0">
+              <h6 class="small text-uppercase font-weight-medium letter-spacing-0_06 text-muted mb-1">Open House</h6>
+              <h3 class="h4">
+                <a href="#">$14,502,000</a>
+              </h3>
+              <p class="text-muted mb-0">4 Floors • 8 Beds •  2,114 Sqft.</p>
+            </div>
+            <div class="card-footer text-muted d-flex justify-content-between align-items-center mx-3 px-0">
+              <div class="d-flex align-items-center text-muted">
+                <i class="svg-icon svg-icon-xs text-secondary mt-n1 mr-2">
+                  <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <rect x="0" y="0" width="24" height="24"></rect>
+                      <path d="M5,10.5 C5,6 8,3 12.5,3 C17,3 20,6.75 20,10.5 C20,12.8325623 17.8236613,16.03566 13.470984,20.1092932 C12.9154018,20.6292577 12.0585054,20.6508331 11.4774555,20.1594925 C7.15915182,16.5078313 5,13.2880005 5,10.5 Z M12.5,12 C13.8807119,12 15,10.8807119 15,9.5 C15,8.11928813 13.8807119,7 12.5,7 C11.1192881,7 10,8.11928813 10,9.5 C10,10.8807119 11.1192881,12 12.5,12 Z" fill="#000000"></path>
+                    </g>
+                  </svg>
+                </i>
+                Los Angeles, CA
+              </div>
+              <a class="d-flex align-items-center font-weight-bold" href="#">
+                Details
+                <i class="svg-icon svg-icon-xs text-primary mt-n1 ml-2">
+                  <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <polygon points="0 0 24 0 24 24 0 24"></polygon>
+                      <rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000) " x="11" y="5" width="2" height="14" rx="1"></rect>
+                      <path d="M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z" fill="#000000" transform="translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997) "></path>
+                    </g>
+                  </svg>
+                </i>
+              </a>
+            </div>
+          </article>
+          <!-- End Property -->
+        </div>
+
+        <div class="col-md-6 col-lg-4 mb-5">
+          <!-- Property -->
+          <article class="card border-0 shadow-sm h-100 mb-3">
+            <a href="#"><img class="card-img-top" src="../../theme/img/demo/real-estate/property-2.jpg" alt="Image Description"></a>
+            <div class="card-body pb-0">
+              <h6 class="small text-uppercase font-weight-medium letter-spacing-0_06 text-muted mb-1">Open House</h6>
+              <h3 class="h4">
+                <a href="#">$2,700,000</a>
+              </h3>
+              <p class="text-muted mb-0">3 Floors • 4 Beds •  1,200 Sqft.</p>
+            </div>
+            <div class="card-footer text-muted d-flex justify-content-between align-items-center mx-3 px-0">
+              <div class="d-flex align-items-center text-muted">
+                <i class="svg-icon svg-icon-xs text-secondary mt-n1 mr-2">
+                  <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <rect x="0" y="0" width="24" height="24"></rect>
+                      <path d="M5,10.5 C5,6 8,3 12.5,3 C17,3 20,6.75 20,10.5 C20,12.8325623 17.8236613,16.03566 13.470984,20.1092932 C12.9154018,20.6292577 12.0585054,20.6508331 11.4774555,20.1594925 C7.15915182,16.5078313 5,13.2880005 5,10.5 Z M12.5,12 C13.8807119,12 15,10.8807119 15,9.5 C15,8.11928813 13.8807119,7 12.5,7 C11.1192881,7 10,8.11928813 10,9.5 C10,10.8807119 11.1192881,12 12.5,12 Z" fill="#000000"></path>
+                    </g>
+                  </svg>
+                </i>
+                Ohio, CLE
+              </div>
+              <a class="d-flex align-items-center font-weight-bold" href="#">
+                Details
+                <i class="svg-icon svg-icon-xs text-primary mt-n1 ml-2">
+                  <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <polygon points="0 0 24 0 24 24 0 24"></polygon>
+                      <rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000) " x="11" y="5" width="2" height="14" rx="1"></rect>
+                      <path d="M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z" fill="#000000" transform="translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997) "></path>
+                    </g>
+                  </svg>
+                </i>
+              </a>
+            </div>
+          </article>
+          <!-- End Property -->
+        </div>
+
+        <div class="col-md-6 col-lg-4 mb-5">
+          <!-- Property -->
+          <article class="card border-0 shadow-sm h-100 mb-3">
+            <a href="#"><img class="card-img-top" src="../../theme/img/demo/real-estate/property-3.jpg" alt="Image Description"></a>
+            <div class="card-body pb-0">
+              <h6 class="small text-uppercase font-weight-medium letter-spacing-0_06 text-muted mb-1">Open House</h6>
+              <h3 class="h4">
+                <a href="#">$5,050,000</a>
+              </h3>
+              <p class="text-muted mb-0">2 Floors • 4 Beds •  509 Sqft.</p>
+            </div>
+            <div class="card-footer text-muted d-flex justify-content-between align-items-center mx-3 px-0">
+              <div class="d-flex align-items-center text-muted">
+                <i class="svg-icon svg-icon-xs text-secondary mt-n1 mr-2">
+                  <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <rect x="0" y="0" width="24" height="24"></rect>
+                      <path d="M5,10.5 C5,6 8,3 12.5,3 C17,3 20,6.75 20,10.5 C20,12.8325623 17.8236613,16.03566 13.470984,20.1092932 C12.9154018,20.6292577 12.0585054,20.6508331 11.4774555,20.1594925 C7.15915182,16.5078313 5,13.2880005 5,10.5 Z M12.5,12 C13.8807119,12 15,10.8807119 15,9.5 C15,8.11928813 13.8807119,7 12.5,7 C11.1192881,7 10,8.11928813 10,9.5 C10,10.8807119 11.1192881,12 12.5,12 Z" fill="#000000"></path>
+                    </g>
+                  </svg>
+                </i>
+                San Francisco, CA
+              </div>
+              <a class="d-flex align-items-center font-weight-bold" href="#">
+                Details
+                <i class="svg-icon svg-icon-xs text-primary mt-n1 ml-2">
+                  <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <polygon points="0 0 24 0 24 24 0 24"></polygon>
+                      <rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000) " x="11" y="5" width="2" height="14" rx="1"></rect>
+                      <path d="M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z" fill="#000000" transform="translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997) "></path>
+                    </g>
+                  </svg>
+                </i>
+              </a>
+            </div>
+          </article>
+          <!-- End Property -->
+        </div>
+
+        <div class="col-md-6 col-lg-4 mb-5">
+          <!-- Property -->
+          <article class="card border-0 shadow-sm h-100 mb-3">
+            <a href="#"><img class="card-img-top" src="../../theme/img/demo/real-estate/property-4.jpg" alt="Image Description"></a>
+            <div class="card-body pb-0">
+              <h6 class="small text-uppercase font-weight-medium letter-spacing-0_06 text-muted mb-1">Open House</h6>
+              <h3 class="h4">
+                <a href="#">$7,590,000</a>
+              </h3>
+              <p class="text-muted mb-0">3 Floors • 12 Beds •  3,508 Sqft.</p>
+            </div>
+            <div class="card-footer text-muted d-flex justify-content-between align-items-center mx-3 px-0">
+              <div class="d-flex align-items-center text-muted">
+                <i class="svg-icon svg-icon-xs text-secondary mt-n1 mr-2">
+                  <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <rect x="0" y="0" width="24" height="24"></rect>
+                      <path d="M5,10.5 C5,6 8,3 12.5,3 C17,3 20,6.75 20,10.5 C20,12.8325623 17.8236613,16.03566 13.470984,20.1092932 C12.9154018,20.6292577 12.0585054,20.6508331 11.4774555,20.1594925 C7.15915182,16.5078313 5,13.2880005 5,10.5 Z M12.5,12 C13.8807119,12 15,10.8807119 15,9.5 C15,8.11928813 13.8807119,7 12.5,7 C11.1192881,7 10,8.11928813 10,9.5 C10,10.8807119 11.1192881,12 12.5,12 Z" fill="#000000"></path>
+                    </g>
+                  </svg>
+                </i>
+                Minneapolis, MN
+              </div>
+              <a class="d-flex align-items-center font-weight-bold" href="#">
+                Details
+                <i class="svg-icon svg-icon-xs text-primary mt-n1 ml-2">
+                  <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <polygon points="0 0 24 0 24 24 0 24"></polygon>
+                      <rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000) " x="11" y="5" width="2" height="14" rx="1"></rect>
+                      <path d="M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z" fill="#000000" transform="translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997) "></path>
+                    </g>
+                  </svg>
+                </i>
+              </a>
+            </div>
+          </article>
+          <!-- End Property -->
+        </div>
+
+        <div class="col-md-6 col-lg-4 mb-5">
+          <!-- Property -->
+          <article class="card border-0 shadow-sm h-100 mb-3">
+            <a href="#"><img class="card-img-top" src="../../theme/img/demo/real-estate/property-5.jpg" alt="Image Description"></a>
+            <div class="card-body pb-0">
+              <h6 class="small text-uppercase font-weight-medium letter-spacing-0_06 text-muted mb-1">Open House</h6>
+              <h3 class="h4">
+                <a href="#">$3,422,000</a>
+              </h3>
+              <p class="text-muted mb-0">2 Floors • 4 Beds •  8,090 Sqft.</p>
+            </div>
+            <div class="card-footer text-muted d-flex justify-content-between align-items-center mx-3 px-0">
+              <div class="d-flex align-items-center text-muted">
+                <i class="svg-icon svg-icon-xs text-secondary mt-n1 mr-2">
+                  <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <rect x="0" y="0" width="24" height="24"></rect>
+                      <path d="M5,10.5 C5,6 8,3 12.5,3 C17,3 20,6.75 20,10.5 C20,12.8325623 17.8236613,16.03566 13.470984,20.1092932 C12.9154018,20.6292577 12.0585054,20.6508331 11.4774555,20.1594925 C7.15915182,16.5078313 5,13.2880005 5,10.5 Z M12.5,12 C13.8807119,12 15,10.8807119 15,9.5 C15,8.11928813 13.8807119,7 12.5,7 C11.1192881,7 10,8.11928813 10,9.5 C10,10.8807119 11.1192881,12 12.5,12 Z" fill="#000000"></path>
+                    </g>
+                  </svg>
+                </i>
+                San Francisco, CA
+              </div>
+              <a class="d-flex align-items-center font-weight-bold" href="#">
+                Details
+                <i class="svg-icon svg-icon-xs text-primary mt-n1 ml-2">
+                  <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <polygon points="0 0 24 0 24 24 0 24"></polygon>
+                      <rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000) " x="11" y="5" width="2" height="14" rx="1"></rect>
+                      <path d="M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z" fill="#000000" transform="translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997) "></path>
+                    </g>
+                  </svg>
+                </i>
+              </a>
+            </div>
+          </article>
+          <!-- End Property -->
+        </div>
+
+        <div class="col-md-6 col-lg-4 mb-5">
+          <!-- Property -->
+          <article class="card border-0 shadow-sm h-100 mb-3">
+            <a href="#"><img class="card-img-top" src="../../theme/img/demo/real-estate/property-6.jpg" alt="Image Description"></a>
+            <div class="card-body pb-0">
+              <h6 class="small text-uppercase font-weight-medium letter-spacing-0_06 text-muted mb-1">Open House</h6>
+              <h3 class="h4">
+                <a href="#">$1,080,000</a>
+              </h3>
+              <p class="text-muted mb-0">2 Floors • 2 Beds •  5,720 Sqft.</p>
+            </div>
+            <div class="card-footer text-muted d-flex justify-content-between align-items-center mx-3 px-0">
+              <div class="d-flex align-items-center text-muted">
+                <i class="svg-icon svg-icon-xs text-secondary mt-n1 mr-2">
+                  <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <rect x="0" y="0" width="24" height="24"></rect>
+                      <path d="M5,10.5 C5,6 8,3 12.5,3 C17,3 20,6.75 20,10.5 C20,12.8325623 17.8236613,16.03566 13.470984,20.1092932 C12.9154018,20.6292577 12.0585054,20.6508331 11.4774555,20.1594925 C7.15915182,16.5078313 5,13.2880005 5,10.5 Z M12.5,12 C13.8807119,12 15,10.8807119 15,9.5 C15,8.11928813 13.8807119,7 12.5,7 C11.1192881,7 10,8.11928813 10,9.5 C10,10.8807119 11.1192881,12 12.5,12 Z" fill="#000000"></path>
+                    </g>
+                  </svg>
+                </i>
+                Ohio, CLE
+              </div>
+              <a class="d-flex align-items-center font-weight-bold" href="#">
+                Details
+                <i class="svg-icon svg-icon-xs text-primary mt-n1 ml-2">
+                  <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <polygon points="0 0 24 0 24 24 0 24"></polygon>
+                      <rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000) " x="11" y="5" width="2" height="14" rx="1"></rect>
+                      <path d="M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z" fill="#000000" transform="translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997) "></path>
+                    </g>
+                  </svg>
+                </i>
+              </a>
+            </div>
+          </article>
+          <!-- End Property -->
+        </div>
+      </div>
+    </div>
+    <!-- End Featured properties -->
+
+    <!-- Benefits -->
+    <div class="space-2 space-3-bottom--lg overflow-hidden">
+      <div class="container">
+        <div class="row no-gutters align-items-center">
+          <div class="col-lg-5 mb-5 mb-lg-0">
+            <h6 class="text-uppercase font-weight-medium letter-spacing-0_06 mb-3">Benefits</h6>
+            <h2 class="text-lh-xs mb-4">Things our customer love</h2>
+            <p class="mb-5">What makes us different from other competitor is that we have three main things that our customer really love about</p>
+
+            <!-- Benefits List -->
+            <ul class="list-unstyled mb-7">
+              <li class="d-flex align-items-start mb-5">
+                <div class="mt-2">
+                  <span class="u-icon u-icon--secondary u-icon--sm rounded-circle">
+                    <span class="u-icon__inner">1</span>
+                  </span>
+                </div>
+                <div class="ml-3">
+                  <p class="mb-0">The ability to match with and book an available home easily and quick</p>
+                </div>
+              </li>
+
+              <li class="d-flex align-items-start mb-5">
+                <div class="mt-2">
+                  <span class="u-icon u-icon--secondary u-icon--sm rounded-circle">
+                    <span class="u-icon__inner">2</span>
+                  </span>
+                </div>
+                <div class="ml-3">
+                  <p class="mb-0">Our process is straightforward and uncomplicated and everything is only require less effort</p>
+                </div>
+              </li>
+
+              <li class="d-flex align-items-start mb-5">
+                <div class="mt-2">
+                  <span class="u-icon u-icon--secondary u-icon--sm rounded-circle">
+                    <span class="u-icon__inner">3</span>
+                  </span>
+                </div>
+                <div class="ml-3">
+                  <p class="mb-0">Whenever you buy it you can sell it anytime with the best price </p>
+                </div>
+              </li>
+            </ul>
+            <!-- End Benefits List -->
+          </div>
+          <div class="col-lg-6 offset-lg-1">
+            <div class="position-relative h-100 vw-lg-50">
+              <img class="img-fluid w-100 rounded rounded-lg-right-0" src="https://images.unsplash.com/photo-1486413869840-a99ac0a4c031?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=671&q=80" alt="Image Description">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Benefits -->
+
+    <!-- CTA -->
+    <div class="text-center space-2 space-3--lg gradient-overlay-quarter-light-v1">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <!-- Card -->
+            <article class="card shadow-sm h-md-100 px-4 py-7 border-top-0 border-left-0 border-right-0 border-bottom border-3 border-primary mb-4 mb-md-0">
+              <div class="w-md-70 mx-md-auto">
+                <span class="u-icon u-icon--lg u-icon--primary-soft rounded-circle mb-4">
+                  <i class="svg-icon svg-icon-sm text-primary u-icon__inner">
+                    <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <rect x="0" y="0" width="24" height="24"></rect>
+                        <path d="M14.2928932,16.7071068 C13.9023689,16.3165825 13.9023689,15.6834175 14.2928932,15.2928932 C14.6834175,14.9023689 15.3165825,14.9023689 15.7071068,15.2928932 L19.7071068,19.2928932 C20.0976311,19.6834175 20.0976311,20.3165825 19.7071068,20.7071068 C19.3165825,21.0976311 18.6834175,21.0976311 18.2928932,20.7071068 L14.2928932,16.7071068 Z" fill="#000000"></path>
+                        <path d="M11,16 C13.7614237,16 16,13.7614237 16,11 C16,8.23857625 13.7614237,6 11,6 C8.23857625,6 6,8.23857625 6,11 C6,13.7614237 8.23857625,16 11,16 Z M11,18 C7.13400675,18 4,14.8659932 4,11 C4,7.13400675 7.13400675,4 11,4 C14.8659932,4 18,7.13400675 18,11 C18,14.8659932 14.8659932,18 11,18 Z" fill="#000000"></path>
+                      </g>
+                    </svg>
+                  </i>
+                </span>
+
+                <h3 class="text-lh-xs mb-3">Looking for a place to stay<br class="d-none d-lg-inline-block"> or a property to rent?</h3>
+                <p class="text-muted mb-5">We guarantee you every aspect that you like on<br class="d-none d-lg-inline-block"> your property is available in here</p>
+                <a class="btn btn-sm btn-primary" href="#">Give it a try now</a>
+              </div>
+            </article>
+            <!-- End Card -->
+          </div>
+
+          <div class="col-md-6">
+            <!-- Card -->
+            <article class="card shadow-sm h-md-100 px-4 py-7 border-top-0 border-left-0 border-right-0 border-bottom border-3 border-primary">
+              <div class="w-md-70 mx-md-auto">
+                <span class="u-icon u-icon--lg u-icon--primary-soft rounded-circle mb-4">
+                  <i class="svg-icon svg-icon-sm text-primary u-icon__inner">
+                    <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <rect x="0" y="0" width="24" height="24"></rect>
+                        <path d="M3.95709826,8.41510662 L11.47855,3.81866389 C11.7986624,3.62303967 12.2013376,3.62303967 12.52145,3.81866389 L20.0429,8.41510557 C20.6374094,8.77841684 21,9.42493654 21,10.1216692 L21,19.0000642 C21,20.1046337 20.1045695,21.0000642 19,21.0000642 L4.99998155,21.0000673 C3.89541205,21.0000673 2.99998155,20.1046368 2.99998155,19.0000673 L2.99999828,10.1216672 C2.99999935,9.42493561 3.36258984,8.77841732 3.95709826,8.41510662 Z M10,13 C9.44771525,13 9,13.4477153 9,14 L9,17 C9,17.5522847 9.44771525,18 10,18 L14,18 C14.5522847,18 15,17.5522847 15,17 L15,14 C15,13.4477153 14.5522847,13 14,13 L10,13 Z" fill="#000000"></path>
+                      </g>
+                    </svg>
+                  </i>
+                </span>
+
+                <h3 class="text-lh-xs mb-3">Wants to sell or rent<br class="d-none d-lg-inline-block"> your property?</h3>
+                <p class="text-muted mb-5">Sell your property in a quick time and<br class="d-none d-lg-inline-block"> less effort than ever</p>
+                <a class="btn btn-sm btn-primary" href="#">Let's get started</a>
+              </div>
+            </article>
+            <!-- End Card -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End CTA -->
+  </main>
+  <!-- ========== END MAIN CONTENT ========== -->
+
+  <%= render "shared/footer" %>
+  <%= render "shared/back_to_top" %>
