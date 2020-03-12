@@ -29,23 +29,23 @@
         <p>
           <%= @space.content %> <a href="#">Read more</a>
         </p>
-        <ul class="list-inline">
-          <% @space.tags.each do |tag| %>
-          <li id="tag" class="badge badge-dark mr-0 list-inline-item"><%=tag.name%></li>
-          <% end %>
-        </ul>
+
         <!-- Rentals -->
+          <div class="card card p-3 mb-3">
+            <h5><strong>STUDIO USE</strong></h5>
+            <div class="center">
+            <ul class="list-inline tags">
+            <% @space.tags.each do |tag| %>
+            <li id="tag" class="fas fa-tag badge badge-dark mr-0 list-inline-item">&nbsp;&nbsp;<span class="tag-text"><%=tag.name%></span></li>
+          <% end %>
+          </ul>
+          </div>
+          </div>
           <div class="card card p-3 mb-3">
             <h5><strong>STUDIO INFORMATION</strong></h5>
             <p><small>Size: 32 m²</small></p>
             <p><small>Type: private</small></p>
             <p><small>Rental Period (Min): 30 Days</small></p>
-          </div>
-          <div class="card card p-3 mb-3">
-            <h5><strong>STUDIO USE</strong></h5>
-            <p><small>Light Sculpting</small></p>
-            <p><small>Ceramic Studio</small></p>
-            <p><small>Photo Studio</small></p>
           </div>
           <div class="card card p-3 mb-3">
             <h5><strong>FACILITIES</strong></h5>
