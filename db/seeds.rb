@@ -23,6 +23,10 @@ addresses = [
   'Fernando Montes de Oca 28',
 ]
 
+tags = %w(painting photo sculpting filming recording woodwork ceramic).map do |name|
+  Tag.create(name: name)
+end
+
 12.times do |n|
   space = Space.new(
     name: "Casa #{Faker::Artist.name}",
@@ -30,13 +34,9 @@ addresses = [
     city: "Mexico City",
     content: "lorem ipsum",
     user: user,
-    price_per_day_cents: rand(1000..3000)
+    price_per_day_cents: rand(1000..3000),
+    tags: tags.sample(rand(1..4))
   )
 
   space.save!
-end
-
-
-%w(painting photo sculpting filming recording woodwork ceramic).each do |name|
-  Tag.create(name: name)
 end

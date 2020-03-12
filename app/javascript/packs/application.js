@@ -6,13 +6,12 @@ import { initNotificationChannel } from '../channels/notification_channel';
 import { ratings } from '../components/ratings';
 import { notifications } from '../components/notifications';
 import { initSweetAlerts } from '../components/sweet-alert';
+import { initSelect2 } from '../plugins/init_select2';
 
 initMapbox();
 initUpdateNavbarOnScroll();
 initNotificationChannel();
 initSweetAlerts();
-
-
 
 
 // import "../../../public/theme/vendor/jquery/dist/jquery.min.js";
@@ -69,3 +68,5 @@ $.HSCore.components.HSSlickCarousel.init('.js-slick-carousel');
 
 // initialization of go to
 $.HSCore.components.HSGoTo.init('.js-go-to');
+=======
+initSelect2();
