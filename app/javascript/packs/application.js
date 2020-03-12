@@ -6,9 +6,10 @@ import { initNotificationChannel } from '../channels/notification_channel';
 import { ratings } from '../components/ratings';
 import { notifications } from '../components/notifications';
 import { initSweetAlerts } from '../components/sweet-alert';
+import { initSelect2 } from '../plugins/init_select2';
 
 initMapbox();
 initUpdateNavbarOnScroll();
 initNotificationChannel();
 initSweetAlerts();
-
+initSelect2();
