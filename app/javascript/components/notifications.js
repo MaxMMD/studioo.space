@@ -11,8 +11,10 @@ if ($button){
 });
 }
 
-if ($bell){
+if ($bell) {
   $bell.addEventListener("animationend", function(event){
-  $bell.classList.remove('notify');
-});
-}
+    $bell.classList.remove('notify');
+  });
+  
+} 
+

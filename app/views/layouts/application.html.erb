@@ -12,13 +12,14 @@
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
+    <%= favicon_link_tag asset_path('https://res.cloudinary.com/doytwihfl/image/upload/v1583963568/favicon2_k1p67x.png') %>
+
   </head>
   <body>
     <%= render "shared/navbar" %>
     <%= yield %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-
+    <p class="notice <%= notice && "alert alert-secondary" %>" role="alert"><%= notice %></p>
+    <p class="alert <%= alert && "alert-secondary" %>"><%= alert %></p>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
   </body>

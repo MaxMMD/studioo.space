@@ -29,7 +29,11 @@
         <p>
           <%= @space.content %> <a href="#">Read more</a>
         </p>
-
+        <ul>
+          <% @space.tags.each do |tag| %>
+          <li><%= tag.name %></li>
+          <% end %>
+        </ul>
         <!-- Rentals -->
           <div class="card card p-3 mb-3">
             <h5><strong>STUDIO INFORMATION</strong></h5>
