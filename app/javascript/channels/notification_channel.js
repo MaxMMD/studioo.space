@@ -18,6 +18,7 @@ const channelCallbacks = {
     // Popup notification on screen
     //document.body.insertAdjacentHTML("afterBegin", `<p class="flash flash-success">${data} - ${notifCounter}</p>`)
     var notif = document.querySelector(".notification");
+    var notifBox = document.querySelector(".notification-box");
     console.log("Notifying")
     var counterTracker = document.querySelector(".notification");
     var count = +counterTracker.dataset.count || 0 
@@ -26,9 +27,10 @@ const channelCallbacks = {
     setTimeout(() => {
       counterTracker.classList.remove("notify");
     }, 1000)
+    
     // TODO: Notification dropdown
     // counterTracker.text = "notifications" + notifCounter;
-    // notif.insertAdjacentHTML("beforeEnd", `<a class="dropdown-item" href="path">${data}</a>`);
+    notifBox.insertAdjacentHTML("beforeEnd", `<a class="dropdown-item" href="path">${data}</a>`);
     // notifCounter+1;
   }
 };
