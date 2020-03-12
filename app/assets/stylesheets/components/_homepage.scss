@@ -1,0 +1,48 @@
+.bgxp {
+  background-color: black;
+}
+
+.gradient-overlay-dark-v1::before {
+    background-image: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0) 150%);
+    background-repeat: repeat-x;
+}
+
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #1cb524;
+    border-color: #1cb524;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #3e00ff;
+    border-color: #3e00ff;
+}
+
+.u-go-to {
+  display: none;
+  position: relative;
+  z-index: 100;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #3e00ff;
+  color: #fff;
+  font-size: 0.75rem;
+  border-radius: 0.25rem;
+  opacity: 0.5;
+  transition: 0.3s ease-out;
+}
+
+.u-go-to__inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.u-go-to:hover, .u-go-to:focus:hover {
+  color: #fff;
+  opacity: 1;
+}
