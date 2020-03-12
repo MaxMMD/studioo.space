@@ -68,5 +68,5 @@ $.HSCore.components.HSSlickCarousel.init('.js-slick-carousel');
 
 // initialization of go to
 $.HSCore.components.HSGoTo.init('.js-go-to');
-=======
+
 initSelect2();
