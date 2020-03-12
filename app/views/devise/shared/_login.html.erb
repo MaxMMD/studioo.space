@@ -4,10 +4,10 @@
       <h2>Log in</h2><br>
       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <div class="form-inputs">
-          <%= f.input :email,
-                      placeholder: 'you@create.com',
+          <%= f.input :login,
+                      placeholder: 'basquiat33',
                       required: false,
-                      input_html: { autocomplete: "email" } %>
+                      input_html: { autocomplete: "username" } %>
           <%= f.input :password,
                       required: false,
                       placeholder: 'your password',
