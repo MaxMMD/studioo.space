@@ -5,18 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/theme/css/theme.css">
+
     <title>Studioo</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
+    <%= favicon_link_tag asset_path('https://res.cloudinary.com/doytwihfl/image/upload/v1583970212/favicon_3_ohamd0.png') %>
+
   </head>
   <body>
     <%= render "shared/navbar" %>
     <%= yield %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-
+    <p class="notice <%= notice && "alert alert-secondary" %>" role="alert"><%= notice %></p>
+    <p class="alert <%= alert && "alert-secondary" %>"><%= alert %></p>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
   </body>

@@ -16,17 +16,15 @@
         </li>
       <% end %>
       <li class="nav-item">
-          <%= link_to "post", new_space_path, class: "nav-link" %>
+          <%= link_to "list a space", new_space_path, class: "nav-link" %>
         </li>
       <% if user_signed_in? %>
         <li class="nav-item">
           <%= link_to "browse", spaces_path, class: "nav-link" %>
         </li>
-        <li class="nav-item">
-          <%= link_to "messages", "#", class: "nav-link" %>
-        </li>
         <li class="nav-item" id="notifMenu">
-          <%= link_to "notifications", "#", class: "nav-link", id: "counterTracker"%>
+          <div id="notif-counter" class="notification"></div>
+          <%# TODO: Dropdown for notifications %>
         </li>
         <li class="nav-item dropdown">
           <%= image_tag "https://res.cloudinary.com/doytwihfl/image/upload/v1582922730/T02NE0241-USA30KXB3-g67656ac417f-512_widzih.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>

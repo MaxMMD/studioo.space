@@ -1,3 +1,4 @@
+require 'pry'
 class SpacesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
@@ -32,6 +33,13 @@ class SpacesController < ApplicationController
     @space = Space.new(space_params)
     @user = User.new(params[:user_id])
     @space.user = @user
+    tags = params["space"]["tag_ids"]
+    tags.each do |tag|
+      if tag != ""
+        tag_instance = Tag.find(tag.to_i)
+        SpaceTag.create(space: @space, tag: tag_instance)
+      end
+    end
     if @space.save
       redirect_to spaces_path
     else

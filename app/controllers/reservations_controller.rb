@@ -11,29 +11,38 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.new(reservation_params)
     @space = Space.find(params[:space_id]) # We also need the space ID, same as the new method
 
-    # CREAR OBJETO DE STRIPE *SESSION
-
     @reservation.space = @space  #assigned the space
     @reservation.user = current_user #assigned the user (current user)
     @reservation.price_per_day = @space.price_per_day
+    @reservation.status = 'pending'
+    @reservation.save!
 
+    # CREAR OBJETO DE STRIPE *SESSION
+    session = Stripe::Checkout::Session.create(
+    payment_method_types: ['card'],
+    line_items: [{
+      name: @reservation.title,
+      amount: @reservation.total_price_cents,
+      currency: 'usd',
+      quantity: 1
+    }],
+    # CREAR URLS PARA SUCCESS Y CANCEL
+    success_url: own_reservations_reservations_url + "?notification=true&notificationTitle=Successful reservation&notify=" + @space.id.to_s,
+    cancel_url: "http://cancel_url"
+    )
 
-    if @reservation.save
-      NotificationChannel.broadcast_to(@space.user, "Hey somebody booked #{@space.name}!")
-      redirect_to reservation_path(@reservation)
+    if @reservation.update!(checkout_session_id: session.id)
+      redirect_to new_reservation_payment_path(@reservation)
     else
       raise
     end
-
-    # NO 4XITE, HAY QUE CREAR MIGRACION con session id y state
-    # @reservation.nuevo_campo_referenciando_stripe = session.id
-
-    @reservation.save
-    redirect_to reservation_path(@reservation)
-
   end
 
   def own_reservations
+    if params[:notify] 
+      space = Space.find(params[:notify].to_i)
+      NotificationChannel.broadcast_to(space.user, "Hey somebody booked #{space.name}!")
+    end
     @reservations = Reservation.where(user: current_user)
   end
 

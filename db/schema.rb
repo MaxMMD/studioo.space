@@ -44,6 +44,8 @@ ActiveRecord::Schema.define(version: 2020_03_10_234215) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "price_per_day_cents", default: 0, null: false
+    t.string "status"
+    t.string "checkout_session_id"
     t.index ["space_id"], name: "index_reservations_on_space_id"
     t.index ["user_id"], name: "index_reservations_on_user_id"
   end

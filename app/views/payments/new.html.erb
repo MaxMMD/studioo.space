@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row justify-content-center listing">
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+
+      <h2>Checkout summary</h2>
+      <br>
+      <p>Total price $ <%= @reservation.total_price %></p>
+      <p>Reserving for <%= pluralize(@reservation.number_of_days, "day") %></p>
+      <p>From <%= @reservation.start_on.strftime("%A, %b %d %Y") %></p>
+      <p>To <%= @reservation.end_on.strftime("%A, %b %d %Y") %></p>
+      <br>
+      <button id="pay" class="btn btn-outline-dark btn-lg btn-block">Confirm</button>
+      <script src="https://js.stripe.com/v3/"></script>
+      <script>
+        const paymentButton = document.getElementById('pay');
+        paymentButton.addEventListener('click', () => {
+          const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
+          stripe.redirectToCheckout({
+            sessionId: '<%= @reservation.checkout_session_id %>'
+          });
+        });
+      </script>
+    </div>
+  </div>
+</div>
