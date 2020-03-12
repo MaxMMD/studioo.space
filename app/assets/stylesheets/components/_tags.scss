@@ -2,6 +2,32 @@
   font-size: 100%;
 }
 
-// .badge {
-//   font-size: 100%;
-// }
+.center{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  text-align: left;
+  min-height: 0vh;
+}
+.tags{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.tags li {
+  display: inline-block;
+  padding: 10px;
+  background: #000;
+  color: #fff;
+  border-radius: 5px;
+}
+
+ul.tags li span {
+  font-family: "Roboto Mono", "Helvetica", "sans-serif";
+}
+
+ul.tags i{
+  padding-right: 5px;
+}
