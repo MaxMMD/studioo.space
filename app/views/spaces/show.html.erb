@@ -29,9 +29,9 @@
         <p>
           <%= @space.content %> <a href="#">Read more</a>
         </p>
-        <ul>
+        <ul class="list-inline">
           <% @space.tags.each do |tag| %>
-          <li><%= tag.name %></li>
+          <li id="tag" class="badge badge-dark mr-0 list-inline-item"><%=tag.name%></li>
           <% end %>
         </ul>
         <!-- Rentals -->
