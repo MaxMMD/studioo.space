@@ -7,6 +7,8 @@ class PagesController < ApplicationController
     # else
     #   @spaces = Space.all
     # end
+
+    @spaces = Space.last(8)
   end
 end
 
