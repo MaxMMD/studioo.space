@@ -1,11 +1,60 @@
-<div class="usercard">
-  <img src="https://res.cloudinary.com/doytwihfl/image/upload/v1582922730/T02NE0241-USA30KXB3-g67656ac417f-512_widzih.jpg" alt="John" style="width:100%">
-  <h1>John Doe</h1>
-  <p class="title">CEO & Founder, Example</p>
-  <p>Harvard University</p>
-  <a href="#"><i class="fas fa-shapes"></i>
-  <a href="#"><i class="fas fa-camera-retro"></i>
-  <a href="#"><i class="fas fa-film"></i>
-  <a href="#"><i class="fas fa-guitar"></i>
-  <p><button>Contact</button></p>
+<div class="container">
+  <div class="info">
+    <div class="row pt-5">
+      <div class="col-12 col-md-4 text-center">
+        <img src="https://res.cloudinary.com/doytwihfl/image/upload/v1582922730/T02NE0241-USA30KXB3-g67656ac417f-512_widzih.jpg" alt="Raised circle image" class="img-fluid rounded-circle shadow-lg" style="width: 180px;">
+      </div>
+      <div class="col-12 col-md-8 d-flex flex-column align-items-center align-items-lg-start">
+        <div class="d-flex flex-row align-items-start mt-3 mt-lg-0">
+          <div class="name">
+            <h2 class="mb-0">Max Dupont</h2>
+          </div>
+          <a href="#a" class="btn btn-primary btn-pill btn-sm ml-3 mt-1">Follow</a>
+        </div>
+        <div class="stats d-flex flex-row align-items-center align-items-lg-start text-center text-lg-left">
+          <div class="posts"><p class="lead"><b>6.6m</b> followers</p></div>
+          <div class="posts"><p class="lead"><b>&nbsp;201</b> following</p></div>
+        </div>
+        <p class="lead mb-0 mt-2"><b>Photographer & Cofounder @studioo</b></p>
+        <p class="lead text-center text-lg-left">Let's let things come out of the woodwork.  I'll give you my best side, tell you all my best lies.  Yeah, awesome right?</p>
+      </div>
+    </div>
+  </div>
+  <div class="navigation d-flex justify-content-center">
+    <ul class="nav nav-primary nav-tabs mt-3 d-flex flex-column flex-md-row">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#photos">
+          <i class="fas fa-th"></i> Photos
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#saved">
+          <i class="far fa-bookmark"></i> Saved
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#tagged">
+          <i class="far fa-id-badge"></i> Tagged
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="profile-tabs tab-content">
+    <div class="tab-pane fade show active" id="photos">
+        <div class="row">
+              <%= render "shared/gallery_profile" %>
+        </div>
+        <div class="d-flex justify-content-center my-5">
+          <a href="#a" class="btn btn-outline-primary btn-pill">Load More</a>
+        </div>
+    </div>
+    <div class="tab-pane fade text-center" id="saved">
+
+      <p class="lead"><span class="text-danger"><i class="far fa-frown-open"></i></span> Nothing saved yet.</p>
+    </div>
+    <div class="tab-pane fade text-center" id="tagged">
+      <p class="lead">Help people tag you.</p>
+      <a href="#a" class="btn btn-info btn-pill">Find Friends</a>
+    </div>
+  </div>
 </div>
