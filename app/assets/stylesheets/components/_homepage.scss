@@ -12,12 +12,26 @@
     color: #fff;
     background-color: #1cb524;
     border-color: #1cb524;
+    box-shadow: 0 4px 11px rgba(55, 125, 255, 0.35);
 }
 
 .btn-primary {
     color: #fff;
     background-color: #3e00ff;
     border-color: #3e00ff;
+}
+
+.transition-3d-hover {
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-wide {
+    min-width: 9.6875rem;
+}
+
+.transition-3d-hover:hover, .transition-3d-hover:focus {
+   -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
 }
 
 .u-go-to {
