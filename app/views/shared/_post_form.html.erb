@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row justify-content-center listing">
-    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+    <div class="col-xs-12 col-sm-8 p-5 col-sm-offset-2 border shadow p-3 mb-5 bg-white rounded">
       <h2>List a new Space</h2><br>
           <%= simple_form_for(@space) do |f| %>
             <%= f.input :name, required: true, autofocus: true %>
@@ -10,7 +10,7 @@
             <%= f.input :city, required: true %>
             <%= f.input :price_per_day, required: true, label: 'Price per day $(USD)' %>
             <%= f.input :photo, as: :file%><br>
-            <%= f.submit "List a space", class: "btn btn-outline-dark btn-lg btn-block" %>
+            <%= f.submit "List a space", class: "btn btn-outline-primary btn-lg btn-block" %>
           <% end %>
     </div>
   </div>

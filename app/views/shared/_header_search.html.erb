@@ -1,42 +1,47 @@
-  <!-- ========== MAIN CONTENT ========== -->
-  <main id="content">
-    <!-- Hero Section -->
-    <div class="gradient-overlay-dark-v1 bg-img-hero" style="background-image: url(https://images.unsplash.com/photo-1447758902204-48010b87c24d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">
-      <div class="w-lg-50 w-md-80 mx-3 mx-md-auto space-2 space-3--sm space-4--lg text-center text-white">
-        <!-- Title -->
-        <div class="mt-5 mb-6">
-          <h2 class="h1 text-lh-xs mb-3">Your next masterpiece<br class="d-none d-lg-inline-block">starts here.</h2>
-          <p class="text-white-70 text-lh-sm">Rent and Sublet Creative Spaces.</p>
-        </div>
-        <!-- End Title -->
+<!-- ========== MAIN CONTENT ========== -->
+<main id="content">
+  <video autoplay muted loop id="myVideo">
+    <source src="https://res.cloudinary.com/dvlgiurta/video/upload/v1584121335/studioo/mixkit-paint-covered-woman-stands-in-front-of-mural-911_fk5wmq.mp4" type="video/mp4">
+  </video>
+  <!-- Hero Section -->
+  <div class="gradient-overlay-dark-v1 bg-img-hero overflow-hidden" >
+    <div class="w-lg-50 w-md-80 mx-3 mx-md-auto space-2 space-3--sm space-4--lg text-center text-white">
+      <!-- Title -->
+      <div class="mt-5 mb-6">
+        <h2 class="h1 text-lh-xs pt-2 mb-3">Your next masterpiece<br class="d-none d-lg-inline-block">starts here.</h2>
+        <p class="text-white-70 text-lh-sm">Rent and Sublet Creative Spaces.</p>
+      </div>
+      <!-- End Title -->
 
-        <!-- Search -->
-        <%= form_tag spaces_path, method: :get, class: "input-group rounded-pill bg-white overflow-hidden p-2 mb-6 align-items-center" do %>
+      <!-- Search -->
+      <%= form_tag spaces_path, method: :get, class: "input-group rounded-pill bg-white overflow-hidden py-2 pl-3 mb-6 align-items-center" do %>
         <%= text_field_tag :query,
           params[:query],
           class: "form-control form-control-sm rounded-pill border-0 mr-1 align-items-center",
-          placeholder: "Find your space"
-                                      %>
-        <%= submit_tag "Search", class: "btn btn-sm btn-primary rounded-pill font-weight-medium px-4 py-2 mr-2" %>
-        <% end %>
-        <!-- End Search -->
-         <a class="js-fancybox text-white" href="javascript:;"
-           data-src="//youtube.com/embed/5ksBQ9jevAI"
-           data-speed="700"
-           data-animate-in="zoomIn"
-           data-animate-out="zoomOut"
-           data-caption="Tropical Experiences with Space">
-          See how it works
-          <i class="u-icon u-icon--sm u-icon--white-soft rounded-circle ml-2">
-            <i class="u-icon__inner svg-icon svg-icon-xs text-white">
-              <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                  <rect x="0" y="0" width="24" height="24"></rect>
-                  <path d="M9.82866499,18.2771971 L16.5693679,12.3976203 C16.7774696,12.2161036 16.7990211,11.9002555 16.6175044,11.6921539 C16.6029128,11.6754252 16.5872233,11.6596867 16.5705402,11.6450431 L9.82983723,5.72838979 C9.62230202,5.54622572 9.30638833,5.56679309 9.12422426,5.7743283 C9.04415337,5.86555116 9,5.98278612 9,6.10416552 L9,17.9003957 C9,18.1765381 9.22385763,18.4003957 9.5,18.4003957 C9.62084305,18.4003957 9.73759731,18.3566309 9.82866499,18.2771971 Z" fill="#000000"></path>
-                </g>
-              </svg>
-            </i>
+          placeholder: "Music Studio in La Condesa, CDMX" %>
+                                    %>
+        <%= submit_tag "Find", class: "btn btn-sm btn-primary rounded-pill font-weight-medium px-5 py-2 mr-2" %>
+      <% end %>
+      <!-- End Search -->
+
+      <a class="js-fancybox text-white" href="javascript:;"
+        data-src="//youtube.com/embed/5ksBQ9jevAI"
+        data-speed="700"
+        data-animate-in="zoomIn"
+        data-animate-out="zoomOut"
+        data-caption="Tropical Experiences with Space">
+        See how it works
+        <i class="u-icon u-icon--sm u-icon--white-soft rounded-circle ml-2">
+          <i class="u-icon__inner svg-icon svg-icon-xs text-white">
+            <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <rect x="0" y="0" width="24" height="24"></rect>
+                <path d="M9.82866499,18.2771971 L16.5693679,12.3976203 C16.7774696,12.2161036 16.7990211,11.9002555 16.6175044,11.6921539 C16.6029128,11.6754252 16.5872233,11.6596867 16.5705402,11.6450431 L9.82983723,5.72838979 C9.62230202,5.54622572 9.30638833,5.56679309 9.12422426,5.7743283 C9.04415337,5.86555116 9,5.98278612 9,6.10416552 L9,17.9003957 C9,18.1765381 9.22385763,18.4003957 9.5,18.4003957 C9.62084305,18.4003957 9.73759731,18.3566309 9.82866499,18.2771971 Z" fill="#000000"></path>
+              </g>
+            </svg>
           </i>
-        </a>
-      </div>
+        </i>
+      </a>
     </div>
+  </div>
+</main>
