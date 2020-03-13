@@ -1,0 +1,9 @@
+.navcolor {
+    color: black !important;
+    font-family: 'Roboto Mono';
+    font-size: 18px;
+    text-shadow: none;
+    &.active {
+      color: #3e00ff;
+    }
+}
