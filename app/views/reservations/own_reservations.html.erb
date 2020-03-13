@@ -1,8 +1,9 @@
-<h2 style="text-align:center; padding-top:30px">My Reservations</h2>
-<div class="d-flex align-items-start">
-  <div class="cards-grid p-3 flex-grow-1">
-    <% @reservations.each do |reservation| %>
-      <%= render 'spaces/card', reservation: reservation, space: reservation.space %>
-    <% end %>
-  </div>
-</div>
+
+  <h2 class="p-2 m-5">My past reservations</h2>
+  <div class="d-flex align-items-start border shadow p-4 m-5  rounded">
+    <div class="cards-grid p-2 flex-grow-1">
+        <% @reservations.each do |reservation| %>
+          <%= render 'spaces/card', reservation: reservation, space: reservation.space %>
+        <% end %>
+      </div>
+   </div>
