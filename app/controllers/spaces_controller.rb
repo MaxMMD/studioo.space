@@ -21,6 +21,7 @@ class SpacesController < ApplicationController
   end
 
   def show
+    @spaces = Space.first(3)
     @space = Space.find(params[:id])
     @reservation = Reservation.new
   end
