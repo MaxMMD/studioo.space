@@ -1,4 +1,4 @@
-require 'pry'
+#require 'pry'
 class SpacesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
@@ -21,6 +21,7 @@ class SpacesController < ApplicationController
   end
 
   def show
+    @spaces = Space.first(3)
     @space = Space.find(params[:id])
     @reservation = Reservation.new
   end
