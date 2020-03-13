@@ -77,7 +77,7 @@ document.addEventListener("keyup", (event) => {
   if (event.key == "c" && event.ctrlKey == true) {
     document.querySelector("[name='space[name]']").value = "My studio in Puebla";
     document.querySelector("[name='space[content]']").value = "Really good studio, with a great view for the etc. And an amazing workshop.";
-    document.querySelector("[name='space[address]']").value = "Puebla 251 - Roma Norte";
+    document.querySelector("[name='space[address]']").value = "Puebla 251, Roma";
     document.querySelector("[name='space[city]']").value = "Mexico City";
     document.querySelector("[name='space[price_per_day]']").value = "100.50";
   }

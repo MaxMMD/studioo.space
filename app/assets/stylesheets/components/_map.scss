@@ -13,3 +13,8 @@
   position: sticky;
   top: 76px;
 }
+
+// Marker color
+.mapboxgl-marker.mapboxgl-marker-anchor-center g:nth-child(2) {
+  fill: #6A00FF;
+}
