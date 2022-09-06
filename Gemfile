@@ -21,7 +21,7 @@ gem 'webpacker', '~> 5.0'
 gem 'devise'
 gem 'geocoder'
 gem 'photoswipe-rails', '~> 4.1', '>= 4.1.2'
-
+gem "dotenv-rails", groups: [:development, :test]
 gem 'money-rails'
 
 gem 'stripe'
