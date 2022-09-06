@@ -6,7 +6,7 @@
     "@rails/webpacker": "5.4.3",
     "bootstrap": "^4.4.1",
     "jquery": "^3.5.0",
-    "mapbox-gl": "^1.8.1",
+    "mapbox-gl": "^1.13.2",
     "popper.js": "^1.16.1",
     "sass": "^1.54.8",
     "select2": "^4.0.13",
